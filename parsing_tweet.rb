@@ -21,7 +21,7 @@ end
 
 base_url    = "/1.1/statuses/show.json"
 query   = URI.encode_www_form("id" => "266270116780576768")
-path = "#{path}?#{query}"
+path = "#{base_url}?#{query}"
 puts "URL pour taper l'api == #{path}"
 
 twitter = Twitter.new

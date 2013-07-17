@@ -23,7 +23,7 @@ query   = URI.encode_www_form(
     "screen_name" => "Lewagonparis",
     "count" => 5,
 )
-path = "#{path}?#{query}"
+path = "#{base_url}?#{query}"
 
 puts "URL pour taper l'api == #{path}"
 twitter = Twitter.new

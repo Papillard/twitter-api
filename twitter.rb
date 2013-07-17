@@ -9,13 +9,14 @@ class Twitter
   require 'rubygems'
   require 'oauth'
   
+  
   CONSUMER_KEY = OAuth::Consumer.new(
-    "FcGrvyBsoKgtiN4QSNegw",
-    "c1syFePcTWhgh4ABTWJLllwrJBfQpm5YV9HSjJOhY") # The consumer = application
+    ENV["TWITTER_CONSUMMER"],
+    ENV["TWITTER_CONSUMMER_SECRET"]) # The consumer = application
     
   ACCESS_TOKEN = OAuth::Token.new(
-    "1600595036-8ahMXMHkpY2phKgyga9HGGKRozAbJmK8jkUgSoO",
-    "xy21NrH2xbne9qWGqpmn2BJGrt3MFBcS1qGCVNFmW4w") # The access token = user
+    ENV["TWITTER_ACCESS_TOKEN"],
+    ENV["TWITTER_ACCESS_TOKEN_SECRET"]) # The access token = user
 
   # All requests will be sent to this server.
   BASE_URL = "https://api.twitter.com"
